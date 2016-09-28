@@ -84,6 +84,7 @@ running    /*查看是否在执行动画，返回NO则动画被Paused或Stopped*
 - initWithMass:stiffness:damping:initialVelocity:
 ```
 DampingRatio为1时没有任何振动动画，越接近0阻尼越小振动次数越多
+
 DampingRatio其实就是由这个公式计算而来：damping / (2 \* sqrt (stiffness \* mass))
 
 Mass：质量，必须大于0
