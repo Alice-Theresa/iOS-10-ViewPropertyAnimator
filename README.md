@@ -40,8 +40,7 @@ UIViewAnimating协议为UIViewPropertyAnimator对象提供了可控制动画的�
 
 UIViewAnimatingState有三种：Active、Inactive、Stopped
 
-Animator的最初状态为Inactive，当调用startAnimation或pauseAnimation方法时，会变为Active，而完成动画后又会回到Inactive的状态
-
+Animator的最初状态为Inactive，当调用startAnimation或pauseAnimation方法时，会变为Active，而完成动画后又会回到Inactive的状态  
 在Active下调用stopAnimation:方法并传入YES将清除所有动画并设为Inactive状态，如果传入NO会切换至Stopped状态，随后可调用finishAnimationAtPosition:完成剩余动作
 
 需要注意，对Inactive的Animator使用pauseAnimation方法会变为Active状态并暂停动画
@@ -73,7 +72,7 @@ running    /*查看是否在执行动画，返回NO则动画被Paused或Stopped*
 
 ###UISpringTimingParameters
 
-看到Spring就知道这是来用模仿弹簧动画的了
+看到Spring就知道这是来用模仿弹簧动画的了  
 你可以这个类来创建一个拥有特定物理属性的弹簧
 
 ```
@@ -83,14 +82,10 @@ running    /*查看是否在执行动画，返回NO则动画被Paused或Stopped*
 - initWithDampingRatio:initialVelocity:
 - initWithMass:stiffness:damping:initialVelocity:
 ```
-DampingRatio为1时没有任何振动动画，越接近0阻尼越小振动次数越多
-
+DampingRatio为1时没有任何振动动画，越接近0阻尼越小振动次数越多  
 DampingRatio其实就是由这个公式计算而来：damping / (2 \* sqrt (stiffness \* mass))
 
-Mass：质量，必须大于0
-
-Stiffness：刚度系数，值越大，弹簧作用在物体的力越大
-
-Damping：阻尼系数，值越大，振幅越小，振荡次数越少
-
+Mass：质量，必须大于0  
+Stiffness：刚度系数，值越大，弹簧作用在物体的力越大  
+Damping：阻尼系数，值越大，振幅越小，振动次数越少  
 InitialVelocity：初始速率，实质是向量，因为带方向
