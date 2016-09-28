@@ -39,7 +39,9 @@ userInteractionEnabled    /*动画执行过程中是否可以干预*/
 UIViewAnimating协议为UIViewPropertyAnimator对象提供了可控制动画的方法
 
 UIViewAnimatingState有三种：Active、Inactive、Stopped
+
 Animator的最初状态为Inactive，当调用startAnimation或pauseAnimation方法时，会变为Active，而完成动画后又会回到Inactive的状态
+
 在Active下调用stopAnimation:方法并传入YES将清除所有动画并设为Inactive状态，如果传入NO会切换至Stopped状态，随后可调用finishAnimationAtPosition:完成剩余动作
 
 需要注意，对Inactive的Animator使用pauseAnimation方法会变为Active状态并暂停动画
@@ -82,7 +84,6 @@ running    /*查看是否在执行动画，返回NO则动画被Paused或Stopped*
 - initWithMass:stiffness:damping:initialVelocity:
 ```
 DampingRatio为1时没有任何振动动画，越接近0阻尼越小振动次数越多
-
 DampingRatio其实就是由这个公式计算而来：damping / (2 \* sqrt (stiffness \* mass))
 
 Mass：质量，必须大于0
