@@ -45,8 +45,6 @@ Animator的最初状态为Inactive，当调用startAnimation或pauseAnimation方
 
 需要注意，对Inactive的Animator使用pauseAnimation方法会变为Active状态并暂停动画
 
-![Animation State.png](./Photo/Animation State.png)
-
 ```
 /*开始、恢复动画*/
 - startAnimation
