@@ -6,7 +6,7 @@
 
 在iOS 10中苹果推出了一系列新的动画API，与以往的相比，可以非常容易实现动画的中断、反转以及重置等操作
 
-###UIViewPropertyAnimator
+### UIViewPropertyAnimator
 
 UIViewPropertyAnimator对象储存了相关的动画信息，你可以随时对其进行操作来改变动画的执行状态
 
@@ -34,7 +34,7 @@ interruptible    /*动画是否可以Pause或Stop*/
 userInteractionEnabled    /*动画执行过程中是否可以干预*/
 ```
 
-###UIViewAnimating
+### UIViewAnimating
 
 UIViewAnimating协议为UIViewPropertyAnimator对象提供了可控制动画的方法
 
@@ -70,7 +70,7 @@ reversed    /*若设为真，则反向执行动画*/
 running    /*查看是否在执行动画，返回NO则动画被Paused或Stopped*/
 ```
 
-###UISpringTimingParameters
+### UISpringTimingParameters
 
 看到Spring就知道这是来用模仿弹簧动画的了  
 你可以这个类来创建一个拥有特定物理属性的弹簧
